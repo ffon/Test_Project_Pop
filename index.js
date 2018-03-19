@@ -1,1 +1,1 @@
-consloe.alert('y');
+consloe.log('y');
