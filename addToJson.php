@@ -24,7 +24,7 @@
 				$data_proccesed = json_encode($array_data, JSON_PRETTY_PRINT);
 				if(file_put_contents('data.json', $data_proccesed))
 				{
-					header("Location: index.php");
+					header("Location: insert_data_page.php");
 					exit();
 				}
 			}
