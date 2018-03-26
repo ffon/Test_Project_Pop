@@ -1,11 +1,4 @@
 <?php
-// $arrne = "dsds";
-// $inp = file_get_contents('respond.json');
-
-// $tempArray = json_decode($inp, true);
-// array_push($tempArray["key"],$arrne);
-
-//  var_dump($tempArray);
 
 
 $str = file_get_contents('respond.json');
@@ -15,10 +8,9 @@ array_push( $arr['employees'], $arrne);
 
 var_dump($arr);
 echo "str\n\n";
-var_dump($str);
 
 $str = json_encode($arr);
-
+var_dump($str);
 
 if (json_decode($str) != null)
  {
