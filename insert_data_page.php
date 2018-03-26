@@ -1,3 +1,2 @@
 <?php
-
-echo "yes this page !!";
+echo "yes this page !!"; 
