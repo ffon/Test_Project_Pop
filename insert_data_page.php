@@ -50,7 +50,7 @@
         </div> 
 	    
 	    <script>
-		var data = require('./respond.json');
+		var data = require('respond.json');
 		console.log(data);
 
 	    </script>
