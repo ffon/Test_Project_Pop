@@ -1,6 +1,7 @@
 <?php
 
-$data[] = array("test" => "data1");
+
+$data = array("test" => "data1");
 echo "data \n";
 var_dump($data);
 echo "-------------------------------------\n";
@@ -17,6 +18,6 @@ var_dump($tempArray);
 echo "-------------------------------------\n";
 $jsonData = json_encode($tempArray);
 echo "jsonData \n";
-var_dump($jsonData);
+var_dump(json_decode($jsonData)); 
 echo "-------------------------------------\n";
-// file_put_contents('respond.json', $jsonData);
+file_put_contents('respond.json', $jsonData);
