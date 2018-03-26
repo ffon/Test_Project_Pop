@@ -1,25 +1,10 @@
 <?php
 
-
-
-$str = '{ 
-
-"players":[
-   {
-
-        "name":"Moldova",
-        "image":"/Images/Moldova.jpg",
-        "roll_over_image":"tank.jpg"
-   },
-   {
-
-        "name":"Georgia",
-        "image":"/Images/georgia.gif",
-        "roll_over_image":"tank.jpg"
-   } ]}';
-
-
- $arr = json_decode($str, true);
+$inp = file_get_contents('respond.json');
+$tempArray = json_decode($inp); // ข้อมูลใน json
+var_dump($tempArray);
+ $arr = json_decode($tempArray, true);
  $arrne = array("key"=>"dsds");
- array_push( $arr['players'], $arrne );
- print_r($arr);
+ array_push( $tempArray, $arrne );
+echo "--------------------\n";
+ var_dump($arr);
