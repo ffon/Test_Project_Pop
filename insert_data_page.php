@@ -11,7 +11,7 @@
 ?>
 <!DOCTYPE html>  
  <html>  
-    <head>  5
+    <head>  8
 	<title>Save to JSON file using PHP</title>  
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
@@ -52,10 +52,11 @@
 	    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	    <script> 
 		    
-		     d3.json("respond.json", function(error, data) {
+		    d3.json("respond.json", function(error, data) {
 		    if (error)
 		      throw error;
-		    console.log(data);
+		    var jsonData = JSON.parse(data);
+		    console.log(jsonData);
 		  });
 		    	
 	    </script>
