@@ -11,7 +11,7 @@
 ?>
 <!DOCTYPE html>  
  <html>  
-    <head>  11
+    <head>  1
 	<title>Save to JSON file using PHP</title>  
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
@@ -56,7 +56,9 @@
 		    if (error)
 		      throw error;
 		    data["คำร้องทั่วไป"] = "123";
+		    console.log(data);
 		    console.log(data["คำร้องทั่วไป"]);
+// 			var json = data;
 		  });
 		    	
 	    </script>
