@@ -1,4 +1,4 @@
-// <?php
+<?php
 // $arrne = "dsds";
 // $inp = file_get_contents('respond.json');
 
