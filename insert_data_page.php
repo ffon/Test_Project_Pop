@@ -58,9 +58,9 @@
 		    data["คำร้องทั่วไป"] = "123";
 		    console.log(data);
 		    console.log(data["คำร้องทั่วไป"]);
-			var json = data;
+			
 
-			var obj = JSON.parse(json);
+			var obj = data;
 
 	    console.log('obj');
 	    console.log(obj);
