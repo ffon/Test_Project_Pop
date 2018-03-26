@@ -1,7 +1,6 @@
 <?php
 
-
-$data = array("test" => "data1");
+$data['test'] = "data1";
 echo "data \n";
 var_dump($data);
 echo "-------------------------------------\n";
