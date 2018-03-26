@@ -6,8 +6,8 @@
     //Takes a JSON encoded string and converts it into a PHP variable.
     $jObject = json_decode($json_file_data);
 
-var_dump($jObject);
-echo "\n";
+// var_dump($jObject);
+// echo "\n";
 ?>
 <!DOCTYPE html>  
  <html>  
@@ -40,10 +40,12 @@ echo "\n";
     		<div class="col-md-8">
     			<h3>Results of reading JSON data file</h3>
     			<?php
-			var_dump($jObject);
+			
     				foreach($jObject as $obj){
     					echo '<strong>Name: </strong>' . $obj->name . '<br /><strong> Email: </strong>' . $obj->email. '<hr />';
     				}
+			
+			var_dump($jObject);
     			?>
     		</div>
     		</div> 
