@@ -12,9 +12,13 @@ $str = file_get_contents('respond.json');
 $arr = json_decode($str, true);
 $arrne['roll_over_image'] = "sadaadad";
 array_push( $arr['employees'], $arrne);
+
+var_dump($arr);
+echo "\n\n";
+var_dump($str);
 $str = json_encode($arr);
 
-var_dump(json_decode($str));
+
 if (json_decode($str) != null)
  {
    $file = fopen('respond.json','w');
