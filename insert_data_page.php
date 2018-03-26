@@ -25,7 +25,6 @@
                     	<?php   
                         	if(isset($error))  
                          	{  
-					echo "error";
                             		echo $error;  
                         	}  
                         ?>  
@@ -45,10 +44,15 @@
     					echo '<strong>Name: </strong>' . $obj->name . '<br /><strong> Email: </strong>' . $obj->email. '<hr />';
     				}
 			
-			var_dump($jObject);
     			?>
     		</div>
     		</div> 
-        </div>  
+        </div> 
+	    
+	    <script>
+		var data = require('./respond.json');
+		console.log(data);
+
+	    </script>
     </body>  
  </html> 
