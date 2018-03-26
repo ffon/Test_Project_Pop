@@ -20,6 +20,6 @@ $str = '{
 
 
  $arr = json_decode($str, true);
- $arrne['name'] = "dsds";
+ $arrne = array("key"=>"dsds");
  array_push( $arr['players'], $arrne );
  print_r($arr);
