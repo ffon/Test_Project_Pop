@@ -49,12 +49,15 @@
     		</div> 
         </div> 
 	    
-	    
+	    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	    <script> 
-		    	var fs = require('respond.json');
-			var data= fs.readFileSync('respond.json', 'utf8');
-			var words = JSON.parse(data);
-			console.log(words);
+		    
+		     d3.json("respond.json", function(error, data) {
+		    if (error)
+		      throw error;
+		    console.log(data);
+		  });
+		    	
 	    </script>
 		
 
