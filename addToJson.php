@@ -22,6 +22,8 @@
 				);
 				$array_data[] = $form_data;
 				$data_proccesed = json_encode($array_data, JSON_PRETTY_PRINT);
+				var_dump(json_decode($data_proccesed));
+				exit();
 				if(file_put_contents('data.json', $data_proccesed))
 				{
 					header("Location: insert_data_page.php");
