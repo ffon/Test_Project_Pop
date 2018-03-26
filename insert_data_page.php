@@ -14,13 +14,15 @@ $arrne['roll_over_image'] = "sadaadad";
 array_push( $arr['employees'], $arrne);
 
 var_dump($arr);
-echo "\n\n";
+echo "str\n\n";
 var_dump($str);
+
 $str = json_encode($arr);
 
 
 if (json_decode($str) != null)
  {
+ echo "y";
    $file = fopen('respond.json','w');
    fwrite($file, $str);
    fclose($file);
