@@ -58,12 +58,19 @@
 		    data["คำร้องทั่วไป"] = "123";
 		    console.log(data);
 		    console.log(data["คำร้องทั่วไป"]);
-// 			var json = data;
+			var json = data;
+
+			var obj = JSON.parse(json);
+
+	    console.log('obj');
+	    console.log(obj);
+			    
+		var new_json = JSON.stringify(obj.push({b: 2}));
+			    
+			    console.log(new_json);
 		  });
 		    	
 	    </script>
-		
-
-	    </script>
+	
     </body>  
  </html> 
