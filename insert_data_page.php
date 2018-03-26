@@ -1,20 +1,25 @@
 <?php
 
-// $data['คำร้องทั่วไป'] = "data1";
-$data['test'] = "data1";
-echo "data \n";
-var_dump($data);
-echo "-------------------------------------\n";
 
-$inp = file_get_contents('respond.json');
-$tempArray = json_decode($inp); // ข้อมูลใน json
-echo "tempArray be \n";
-var_dump($tempArray);
 
-echo "-------------------------------------\n";
-array_push($tempArray, $data);
-$jsonData = json_encode($tempArray);
-echo "jsonData \n";
-var_dump(json_decode($jsonData)); 
-echo "-------------------------------------\n";
-file_put_contents('respond.json', $jsonData);
+$str = '{ 
+
+"players":[
+   {
+
+        "name":"Moldova",
+        "image":"/Images/Moldova.jpg",
+        "roll_over_image":"tank.jpg"
+   },
+   {
+
+        "name":"Georgia",
+        "image":"/Images/georgia.gif",
+        "roll_over_image":"tank.jpg"
+   } ]}';
+
+
+ $arr = json_decode($str, true);
+ $arrne['name'] = "dsds";
+ array_push( $arr['players'], $arrne );
+ print_r($arr);
