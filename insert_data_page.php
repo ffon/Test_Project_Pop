@@ -1,7 +1,7 @@
 <?php
 
-$data['คำร้องทั่วไป'] = "data1";
-// $data['test'] = "data1";
+// $data['คำร้องทั่วไป'] = "data1";
+$data['test'] = "data1";
 echo "data \n";
 var_dump($data);
 echo "-------------------------------------\n";
