@@ -12,9 +12,6 @@ var_dump($tempArray);
 
 echo "-------------------------------------\n";
 array_push($tempArray, $data);
-echo "tempArray after \n";
-var_dump($tempArray);
-echo "-------------------------------------\n";
 $jsonData = json_encode($tempArray);
 echo "jsonData \n";
 var_dump(json_decode($jsonData)); 
