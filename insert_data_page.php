@@ -14,7 +14,7 @@ $arrne['roll_over_image'] = "sadaadad";
 array_push( $arr['employees'], $arrne);
 $str = json_encode($arr);
 
-var_dump($str);
+var_dump(json_decode($str));
 if (json_decode($str) != null)
  {
    $file = fopen('respond.json','w');
