@@ -49,9 +49,14 @@
     		</div> 
         </div> 
 	    
+	    
+	    <script> type="text/javascript" src="respond.json"</script>
 	    <script>
-		var data = require('respond.json');
-		console.log(data);
+		    
+	    	var mydata = JSON.parse(respond);
+		 console.log(mydata);
+	    </script>
+		
 
 	    </script>
     </body>  
