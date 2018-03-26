@@ -1,5 +1,5 @@
 <?php
- $arrne = array("key"=>"dsds");
+ $arrne["key"] = "dsds";
 $inp = file_get_contents('respond.json');
 // $tempArray = json_decode($inp); // ข้อมูลใน json
 
