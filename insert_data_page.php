@@ -1,55 +1,41 @@
-<?php
-
-
-// $str = file_get_contents('respond.json');
-// $arr = json_decode($str, true);
-// array_push( $arr['employees'], "sadaadad");
-
-// var_dump($arr);
-
-// if (count($arr)>0)
-//  {
-//    var_dump($arr);
-//    $file = fopen('respond.json','a+');
-//    fwrite($file, $arr);
-//    fclose($file);
-//  }
-
-
-	$error = '';
-	if(isset($_POST["submit"]))
-	{
-		if(empty($_POST["name"]))
-		{
-			$error = "<label class='text-danger'>( Enter a name please. )</label>";
-		}
-		else if(empty($_POST["email"]))
-		{
-			$error = "<label class='text-danger'>( Enter a email address please. ) </label>";
-		}
-		else
-		{
-			if(file_exists('data.json'))
-			{
-				$current_data = file_get_contents('data.json');
-				$array_data = json_decode($current_data, true);
-				$form_data = array(
-					'name' => $_POST['name'],
-					'email' => $_POST['email']
-				);
-				$array_data[] = $form_data;
-				$data_proccesed = json_encode($array_data, JSON_PRETTY_PRINT);
-				if(file_put_contents('data.json', $data_proccesed))
-				{
-					header("Location: index.php");
-					exit();
-				}
-			}
-			else
-			{
-				$error = "<label class='text-danger'>File not found!</label>";
-			}
-		}
-	}
-	?>
-
+<?php include_once 'addToJson.php'; ?>
+<?php include_once 'parseJson.php'; ?>
+<!DOCTYPE html>  
+ <html>  
+    <head>  
+	<title>Save to JSON file using PHP</title>  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script></head>  
+    <body>  
+        <div class="container">  
+    		<div class="row">
+    		<div class="col-md-4">
+            	<h3 align="">Append Data to JSON file</h3><br />                 
+                	<form method="post">  
+                    	<?php   
+                        	if(isset($error))  
+                         	{  
+                            	echo $error;  
+                        	}  
+                        ?>  
+                        <br />  
+                        <label>Name</label>  
+                        <input type="text" name="name" class="form-control" /><br />  
+                        <label>Email</label>  
+                        <input type="text" name="email" class="form-control" /><br />   
+                    	<input type="submit" name="submit" value="Add to json file" class="btn btn-info" /><br /><br />                      
+                	</form> 
+    		</div>
+    		<div class="col-md-8">
+    			<h3>Results of reading JSON data file</h3>
+    			<?php
+    				foreach($jObject as $obj){
+    					echo '<strong>Name: </strong>' . $obj->name . '<br /><strong> Email: </strong>' . $obj->email. '<hr />';
+    				}
+    			?>
+    		</div>
+    		</div> 
+        </div>  
+    </body>  
+ </html> 
