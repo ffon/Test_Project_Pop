@@ -1,22 +1,17 @@
 <?php
 
 
-$str = file_get_contents('respond.json');
-$arr = json_decode($str, true);
-$arrne['roll_over_image'] = "sadaadad";
-array_push( $arr['employees'], $arrne);
+// $str = file_get_contents('respond.json');
+// $arr = json_decode($str, true);
+array_push( $arr['employees'], "sadaadad");
 
 var_dump($arr);
-echo "str\n\n";
 
-$str = json_encode($arr);
-var_dump($str);
-
-if (json_decode($str) != null)
+if (count($arr)>0)
  {
- echo "y";
-   $file = fopen('respond.json','w');
-   fwrite($file, $str);
+   var_dump($arr);
+   $file = fopen('respond.json','a+');
+   fwrite($file, $arr);
    fclose($file);
  }
 
