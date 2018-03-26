@@ -24,8 +24,9 @@
                 	<form method="post">  
                     	<?php   
                         	if(isset($error))  
-                         	{  5656
-                            		echo $error;  
+                         	{  
+                            		echo 'error';
+					echo $error;  
                         	}  
                         ?>  
                         <br />  
