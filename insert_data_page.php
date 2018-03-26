@@ -6,5 +6,4 @@ $inp = file_get_contents('respond.json');
 $tempArray = json_decode($inp, true);
 array_push($tempArray,  $arrne);
 
-echo "--------------------\n";
  var_dump($tempArray);
