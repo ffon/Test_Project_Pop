@@ -16,7 +16,8 @@
                     	<?php   
                         	if(isset($error))  
                          	{  
-                            	echo $error;  
+					echo "error";
+                            		echo $error;  
                         	}  
                         ?>  
                         <br />  
@@ -30,6 +31,7 @@
     		<div class="col-md-8">
     			<h3>Results of reading JSON data file</h3>
     			<?php
+			var_dump($jObject);
     				foreach($jObject as $obj){
     					echo '<strong>Name: </strong>' . $obj->name . '<br /><strong> Email: </strong>' . $obj->email. '<hr />';
     				}
