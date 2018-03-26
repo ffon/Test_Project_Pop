@@ -11,7 +11,7 @@
 ?>
 <!DOCTYPE html>  
  <html>  
-    <head>  56
+    <head>  
 	<title>Save to JSON file using PHP</title>  
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
@@ -24,7 +24,7 @@
                 	<form method="post">  
                     	<?php   
                         	if(isset($error))  
-                         	{  
+                         	{  5656
                             		echo $error;  
                         	}  
                         ?>  
@@ -50,11 +50,11 @@
         </div> 
 	    
 	    
-	    <script> type="text/javascript" src="respond.json"</script>
-	    <script>
-		    
-	    	var mydata = JSON.parse(respond);
-		 console.log(mydata);
+	    <script> 
+		    	var fs = require('fs');
+			var data= fs.readFileSync('respond.json', 'utf8');
+			var words = JSON.parse(data);
+			console.log(words);
 	    </script>
 		
 
