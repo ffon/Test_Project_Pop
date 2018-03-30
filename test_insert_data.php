@@ -21,12 +21,25 @@
         firebase.initializeApp(config);
 	      
 	  // ------  
-	DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
-	DatabaseReference mUsersRef = mRootRef.child("users");
-	DatabaseReference mMessagesRef = mRootRef.child("messages");
-	mUsersRef.child("ขอคืนเงิน").setValue("Jirawatee"); // แก้ไข 
-	FriendlyMessage friendlyMessage = new FriendlyMessage("test", "test"); // เพิ่มข้อมูล
-	mMessageRef.push().setValue(friendlyMessage);
+	
+	var database = firebase.database();
+	var leadsRef = database.ref('ksbot-ecbd2');
+	var newClientKey = database.ref().child('ksbot-ecbd2').push().key;
+	leadsRef.on('value', function(snapshot) {
+	    snapshot.forEach(function(childSnapshot) {
+	      var childData = childSnapshot.val();
+	    });
+	});
+	leadsRef.on('child_added', function(snapshot) {
+		var newPost = snapshot.val();
+	  	console.log(newPost);
+	});
+// 	DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
+// 	DatabaseReference mUsersRef = mRootRef.child("users");
+// 	DatabaseReference mMessagesRef = mRootRef.child("messages");
+// 	mUsersRef.child("ขอคืนเงิน").setValue("Jirawatee"); // แก้ไข 
+// 	FriendlyMessage friendlyMessage = new FriendlyMessage("test", "test"); // เพิ่มข้อมูล
+// 	mMessageRef.push().setValue(friendlyMessage);
 	      
       </script>
 	
