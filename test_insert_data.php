@@ -25,7 +25,7 @@
 </style>
 </head>  
 	<body> 
-    55
+    9
     <header class="header">   
     <div class="container-fluid">
       <h1>Data management</h1>
@@ -73,8 +73,11 @@
               <!-- data -->
               <tr>
               <?php 
-//                 $data = $_POST['str'];
-// 		   var_dump($data);
+                $data = isset($_POST['data']) ? $_POST['data'] : null; // get data from js
+                $decode_data = json_decode($data);
+
+                var_dump($data);
+                var_dump($decode_data);
               ?>
                 <td class="id">1</td>
                 <td class="key">test_key</td>
@@ -106,7 +109,7 @@
 
       // --------------  
       var ref = firebase.database().ref();
-      var data_send = [];
+      var data_array = [];
       var data = {};
       ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
         data = snapshot.val();
@@ -114,39 +117,28 @@
 
         for(var i = 0; i< data.length ; i++)
         {
-          console.log(data[i].key); 
-          console.log(data[i].date); 
-          console.log('------------'); 
-          console.log(data[i].value); 
+          var data_g = {};
+            data_g.id    = i+1;
+            data_g.key   = data[i].key; 
+            data_g.date  = data[i].date; 
+            data_g.value = data[i].value; 
+
+            data_array.push(data_g);
         }
 
       }, function (error) {
         alert("Error: " + error.code);
       });
      
-      // for(var i = 0; i< data.length ; i++)
-      //   {
-      //     console.log(data[i]); 
-      //     console.log(data[i].date); 
-      //     console.log('------------'); 
-      //     console.log(i); 
-      //   }
+     console.log(data_array);
+      var data_send = {};
+      data_send.data = JSON.stringify(data_array);
 
-      // var data_job_send = {};
-      // data_job_send.data = JSON.stringify(datas);
-
-      // if(j_check != 0)// if select job
-      // {
-      //     $.post("/dx_vrp6/get_data_js",data_job_send,function(data_status)
-      //     {
-      //         window.location.href = "/transport";
-      //     })
-      //     $('#button-create-transpot').attr("disabled","disabled"); // disabled btn
-      // }
-      // else
-      // {
-      //     alert('Please select job for create transport.');
-      // }  
+      $.post("https://test-project-pop.herokuapp.com/test_insert_data.php",data_send,function(data_status)
+      {
+        window.location.href = "https://test-project-pop.herokuapp.com/test_insert_data.php";
+      })
+    
 
 
       // var push_Ref = ref("key3").set("value"); // เพิ่มข้อมูลลงใน file base
