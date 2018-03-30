@@ -22,7 +22,6 @@
           </thead>
 
           <tbody>
-
             <!-- data -->
             <tr>
               <td class="table-checkbox"><input class="selectCheckbox" type="checkbox" name="id_check" id="id" data-jindex="id'" value="id"/></td>
