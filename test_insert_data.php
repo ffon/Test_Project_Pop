@@ -1,5 +1,5 @@
 <html>  
-  <head>  test
+  <head> 
     <title>Save to Data file using PHP</title>  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
@@ -23,21 +23,21 @@
 
           <tbody>
 
-            // data
-            <tr>';
+            <!-- data -->
+            <tr>
               <td class="table-checkbox"><input class="selectCheckbox" type="checkbox" name="id_check" id="id" data-jindex="id'" value="id"/></td>
               <td class="id">1</td>
               <td class="key">test_key</td>
               <td class="value">test_value</td>
             </tr>
 
-          </tbody>';
+          </tbody>
 
-      </table>';
+      </table>
 
-    </div>';
+    </div>
 
-  </div>'
+  </div>
  
     <script>
         
