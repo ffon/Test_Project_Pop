@@ -23,16 +23,15 @@
       <input class="form-control form-text" type="text" id="insert-value" name="value" value="" size="60" maxlength="255">
     </div>
 
-    <div>
+    <div class="btn_gruop">
     <div><button type="submit" class="btn btn-success">Submit</button></div>
-    <div><button type="submit" class="btn btn-success">Reset</button></div>
-      
+    <div><button type="submit" class="btn .btn-warning">Reset</button></div>
     </div>
 
 
     <div class="grid-result-data">
       <div class="table-responsive-report" style="padding: 10px 15px 10px 15px;">
-        <table class=".table-striped" id="table-vehicle">
+        <table class="clickable table table-hover table-striped sticky-enabled tableheader-processed sticky-table" id="table-vehicle">
             <thead>
                 <tr>
                   <th>ID</th>
@@ -49,8 +48,8 @@
                 <td class="id">1</td>
                 <td class="key">test_key</td>
                 <td class="value">test_value</td>
-                <td class="value">Created</td>
-                <td class="value">Operations</td>
+                <td class="created">Created</td>
+                <td class="operations">Operations</td>
               </tr>
 
             </tbody>
