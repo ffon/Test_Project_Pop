@@ -78,7 +78,7 @@
                 <td class="key">test_key</td>
                 <td class="value">test_value</td>
                 <td class="created">Created</td>
-                <td class="operations"><a class="glyphicon glyphicon-pencil" href="https://www.w3schools.com/html/"></a> &nbsp &nbsp <a class="glyphicon glyphicon-trash"></a></td>
+                <td class="operations"><a class="glyphicon glyphicon-pencil" href="https://www.w3schools.com/html/"></a> &nbsp &nbsp <a class="glyphicon glyphicon-trash" href="https://www.w3schools.com/html/"></a></td>
               </tr>
 
             </tbody>
