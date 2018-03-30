@@ -28,17 +28,16 @@
 	var newClientKey = database.ref().child('ksbot-ecbd2').push().key;
 	console.log(newClientKey);
 	
-	leadsRef.on('child_added', function(snapshot) {
-		console.log("YY");
-	  	console.log(snapshot);
-	});	     
+	     
 	
 	leadsRef.on('value', function(snapshot) {
 		console.log("YYY");
 		console.log(snapshot);
-// 	    snapshot.forEach(function(childSnapshot) {
-// 	      var childData = childSnapshot.val();
-// 	    });
+	    snapshot.forEach(function(childSnapshot) {
+	      var childData = childSnapshot.val();
+		    console.log('----------------');
+		    console.log(childData);
+	    });
 	});
 	
 	      
