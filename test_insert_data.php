@@ -74,6 +74,7 @@
               <tr>
               <?php 
                 $data = $_POST['str'];
+		 var_dump($data);
               ?>
                 <td class="id">1</td>
                 <td class="key">test_key</td>
