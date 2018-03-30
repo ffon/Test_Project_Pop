@@ -120,7 +120,7 @@
 
       // var push_Ref = ref("key3").set("value"); // เพิ่มข้อมูลลงใน file base
 
-      // ref.child("key2").remove();    // ลบข้อมูลลงใน file base
+      ref.child("key3").remove();    // ลบข้อมูลลงใน file base
 
     </script>
 	
