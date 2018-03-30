@@ -73,8 +73,8 @@
               <!-- data -->
               <tr>
               <?php 
-                $data = $_POST['str'];
-		            var_dump($data);
+//                 $data = $_POST['str'];
+// 		   var_dump($data);
               ?>
                 <td class="id">1</td>
                 <td class="key">test_key</td>
@@ -117,7 +117,7 @@
           console.log(data[i].key); 
           console.log(data[i].date); 
           console.log('------------'); 
-          // console.log(data[i].value); 
+          console.log(data[i].value); 
         }
 
       }, function (error) {
