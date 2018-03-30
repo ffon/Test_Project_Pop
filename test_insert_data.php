@@ -25,7 +25,7 @@
 
     <div class="btn_gruop">
     <div><button type="submit" class="btn btn-success">Submit</button></div>
-    <div><button type="submit" class="btn .btn-warning">Reset</button></div>
+    <div><button type="submit" class="btn btn-warning">Reset</button></div>
     </div>
 
 
