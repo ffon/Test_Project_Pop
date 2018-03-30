@@ -32,10 +32,9 @@
 
     <div class="grid-result-data">
       <div class="table-responsive-report" style="padding: 10px 15px 10px 15px;">
-        <table class="clickable table table-hover table-striped sticky-enabled tableheader-processed sticky-table" id="table-vehicle">
+        <table class=".table-striped" id="table-vehicle">
             <thead>
                 <tr>
-                  <th><input class="selectCheckbox" type="checkbox" name="id_check_all" id="check-all"/></th>
                   <th>ID</th>
                   <th>KEY</th>
                   <th>Value</th>
@@ -47,10 +46,8 @@
             <tbody>
               <!-- data -->
               <tr>
-                <td class="table-checkbox"><input class="selectCheckbox" type="checkbox" name="id_check" id="id" data-jindex="id'" value="id"/></td>
                 <td class="id">1</td>
                 <td class="key">test_key</td>
-                <td class="value">test_value</td>
                 <td class="value">test_value</td>
                 <td class="value">Created</td>
                 <td class="value">Operations</td>
