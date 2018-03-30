@@ -1,4 +1,5 @@
-
+(function($)
+{
 console.log("1");
     // Initialize Firebase
       var config = {
@@ -38,4 +39,4 @@ console.log("1");
       });
      
      console.log(data_array);
-
+})(jQuery);
