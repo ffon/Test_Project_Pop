@@ -1,42 +1,49 @@
-<html>  
-  <head> 899
+<html> 
+   
+  <head> 
     <title>Save to Data file using PHP</title>  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src = "https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
   </head>  
 	<body> 
-
-  <div class="grid-result-data">
-    <div class="table-responsive-report" style="padding: 10px 15px 10px 15px;">
-      <table class="clickable table table-hover table-striped sticky-enabled tableheader-processed sticky-table" id="table-vehicle">
-          <thead>
-              <tr>
-                <th><input class="selectCheckbox" type="checkbox" name="id_check_all" id="check-all"/></th>
-                <th>ID</th>
-                <th>KEY</th>
-                <th>Value</th>
-              </tr>
-          </thead>
-
-          <tbody>
-            <!-- data -->
-            <tr>
-              <td class="table-checkbox"><input class="selectCheckbox" type="checkbox" name="id_check" id="id" data-jindex="id'" value="id"/></td>
-              <td class="id">1</td>
-              <td class="key">test_key</td>
-              <td class="value">test_value</td>
-            </tr>
-
-          </tbody>
-
-      </table>
-
+    
+    <div class="form-item form-type-textfield form-group">  
+    <label class="control-label" for="edit-key">Key</label> 
+      <input class="form-control form-text" type="text" id="edit-key" name="key" value="" size="60" maxlength="255">
     </div>
 
-  </div>
+
+    <div class="grid-result-data">
+      <div class="table-responsive-report" style="padding: 10px 15px 10px 15px;">
+        <table class="clickable table table-hover table-striped sticky-enabled tableheader-processed sticky-table" id="table-vehicle">
+            <thead>
+                <tr>
+                  <th><input class="selectCheckbox" type="checkbox" name="id_check_all" id="check-all"/></th>
+                  <th>ID</th>
+                  <th>KEY</th>
+                  <th>Value</th>
+                </tr>
+            </thead>
+
+            <tbody>
+              <!-- data -->
+              <tr>
+                <td class="table-checkbox"><input class="selectCheckbox" type="checkbox" name="id_check" id="id" data-jindex="id'" value="id"/></td>
+                <td class="id">1</td>
+                <td class="key">test_key</td>
+                <td class="value">test_value</td>
+              </tr>
+
+            </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
  
     <script>
         
