@@ -1,13 +1,28 @@
 <html> 
-   
-  <head> 
-    <title>Data management</title>  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src = "https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-  </head>  
+<head> 
+<title>Data management</title>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src = "https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<style>
+  table {
+      border-collapse: collapse;
+      width: 100%;
+  }
+  th, td {
+      text-align: left;
+      padding: 8px;
+  }
+  tr:nth-child(even){background-color: #f2f2f2}
+
+  th {
+      background-color: #003366;
+      color: white;
+  }
+</style>
+</head>  
 	<body> 
     
     <header class="header">   
@@ -18,15 +33,24 @@
 
 
     <div class="form-item form-type-textfield form-group">  
-    <label class="control-label" for="edit-key">Key</label> 
-      <input class="form-control form-text" type="text" id="insert-key" name="key" value="" size="60" maxlength="255">
-      <input class="form-control form-text" type="text" id="insert-value" name="value" value="" size="60" maxlength="255">
+
+      <div class="col-sm-6">
+        <label class="control-label" for="edit-key">Key</label> 
+        <input class="form-control form-text" type="text" id="insert-key" name="key" value="" size="60" maxlength="255">
+      </div>
+
+      <div class="col-sm-6">
+        <label class="control-label" for="edit-key">Value</label> 
+        <input class="form-control form-text" type="text" id="insert-value" name="value" value="" size="60" maxlength="255">
+      </div>
+
     </div>
 
-    <div class="btn_gruop">
-    <div><button type="submit" class="btn btn-success">Submit</button></div>
-    <div><button type="submit" class="btn btn-warning">Reset</button></div>
-    </div>
+      <div class="btn_gruop">
+        <div><button type="submit" class="btn btn-success">Submit</button></div>
+        <div><button type="submit" class="btn btn-warning">Reset</button></div>
+      </div>
+  
 
 
     <div class="grid-result-data">
