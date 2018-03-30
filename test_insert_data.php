@@ -45,8 +45,8 @@
       </div>
 
       <div class="col-sm-4">
-        <div><button type="submit" class="btn btn-success">Submit</button></div>
-        <div><button type="submit" class="btn btn-warning">Reset</button></div>
+        <div class="col-sm-2"><button type="submit" class="btn btn-success">Submit</button></div>
+        <div class="col-sm-2"><button type="submit" class="btn btn-warning">Reset</button></div>
       </div>
 
     </div>
