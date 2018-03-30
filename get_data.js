@@ -39,3 +39,5 @@ function myFunction() {
      console.log(data_array);
       var data_send = {};
 }
+
+myFunction();
