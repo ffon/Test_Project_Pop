@@ -38,9 +38,9 @@
 // 	   "0" : 1
 // 	});e
 	      
-	var push_Ref = firebase.database().ref("key2").set("value1"); // เพิ่มข้อมูลลงใน file base
+	var push_Ref = firebase.database().ref("key3").set("value"); // เพิ่มข้อมูลลงใน file base
 	
-	     
+	 ref.child("key2").remove();    // ลบข้อมูลลงใน file base
 	      
       </script>
 	
