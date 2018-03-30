@@ -1,7 +1,7 @@
 <html> 
    
   <head> 
-    <title>Save to Data file using PHP</title>  
+    <title>Data management</title>  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -10,6 +10,13 @@
   </head>  
 	<body> 
     
+    <header class="header">   
+    <div class="container-fluid">
+      <h1>Data management</h1>
+    </div>
+    </header>
+
+
     <div class="form-item form-type-textfield form-group">  
     <label class="control-label" for="edit-key">Key</label> 
       <input class="form-control form-text" type="text" id="edit-key" name="key" value="" size="60" maxlength="255">
