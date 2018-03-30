@@ -36,9 +36,9 @@
 // 	var write_Ref = firebase.database().ref("a"); // แก้ไข้ข้อมูลใน a ที่ index 0 เป็น 1
 // 	write_Ref.update ({
 // 	   "0" : 1
-// 	});
+// 	});e
 	      
-	var push_Ref = firebase.database().ref("id1").set ({"key1":"value1"}); // เพิ่มข้อมูลลงใน file base
+	var push_Ref = firebase.database().ref("key2").set("value1"); // เพิ่มข้อมูลลงใน file base
 	
 	     
 	      
