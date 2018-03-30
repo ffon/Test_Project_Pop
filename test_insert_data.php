@@ -78,7 +78,7 @@
                 <td class="key">test_key</td>
                 <td class="value">test_value</td>
                 <td class="created">Created</td>
-                <td class="operations"><i class="glyphicon glyphicon-pencil"></i></td>
+                <td class="operations"><i class="glyphicon glyphicon-pencil" href="/google.com"></i> &nbsp &nbsp <i class="glyphicon glyphicon-trash"></i></td>
               </tr>
 
             </tbody>
