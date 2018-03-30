@@ -8,7 +8,7 @@
     <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
   </head>  
 	<body> 
-
+ 
     <script>
         
       // Initialize Firebase
