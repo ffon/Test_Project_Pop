@@ -24,7 +24,9 @@
     </div>
 
     <div>
-      <button type="submit" class="btn btn-success">Submit</button>
+    <div><button type="submit" class="btn btn-success">Submit</button></div>
+    <div><button type="submit" class="btn btn-success">Reset</button></div>
+      
     </div>
 
 
@@ -46,6 +48,8 @@
                 <td class="table-checkbox"><input class="selectCheckbox" type="checkbox" name="id_check" id="id" data-jindex="id'" value="id"/></td>
                 <td class="id">1</td>
                 <td class="key">test_key</td>
+                <td class="value">test_value</td>
+                <td class="value">test_value</td>
                 <td class="value">test_value</td>
               </tr>
 
