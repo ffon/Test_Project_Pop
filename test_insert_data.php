@@ -38,7 +38,7 @@
 // 	   "0" : 1
 // 	});
 	      
-	var push_Ref = firebase.database().ref("key"); // เพิ่มข้อมูลลงใน file base
+	var push_Ref = firebase.database().ref("key").key; // เพิ่มข้อมูลลงใน file base
 	push_Ref.push ("data");
 	     
 	      
