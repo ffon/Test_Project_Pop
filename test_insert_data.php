@@ -117,11 +117,11 @@
       })
 
       var httpc = new XMLHttpRequest(); // simplified for clarity
-      var url = "test_insert_data.php";
+      var url = "https://test-project-pop.herokuapp.com/test_insert_data.php";
       httpc.open("POST", url, true); // sending as POST
 
       httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-      httpc.setRequestHeader("Content-Length", data_display.length); // POST request MUST have a Content-Length header (as per HTTP/1.1)
+      httpc.setRequestHeader("Content-Length", data_display); // POST request MUST have a Content-Length header (as per HTTP/1.1)
 
       httpc.onreadystatechange = function() { //Call a function when the state changes.
       if(httpc.readyState == 4 && httpc.status == 200) { // complete and no errors
