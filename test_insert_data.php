@@ -25,13 +25,13 @@
 </style>
 </head>  
 	<body> 
-    
+    5
     <header class="header">   
     <div class="container-fluid">
       <h1>Data management</h1>
     </div>
     </header>
-55
+
 
     <div class="form-item form-type-textfield form-group">  
 
@@ -107,21 +107,24 @@
       // --------------  
       var ref = firebase.database().ref();
       var data_send = [];
-      var data;
+      var data = {};
       ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
         console.log(snapshot.val());
         data = snapshot.val();
 
-        for(var i = 0; i< data.length ; i++)
+      }, function (error) {
+        console.log("Error: " + error.code);
+      });
+      console.log('********************');
+      console.log(data);
+      console.log('--------------------');
+      for(var i = 0; i< data.length ; i++)
         {
           console.log(data[i]); 
           console.log(data[i].date); 
           console.log('------------'); 
           console.log(i); 
         }
-      }, function (error) {
-        console.log("Error: " + error.code);
-      })
 
       // var data_job_send = {};
       // data_job_send.data = JSON.stringify(datas);
