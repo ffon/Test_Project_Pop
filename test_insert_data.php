@@ -34,22 +34,24 @@
 
     <div class="form-item form-type-textfield form-group">  
 
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <label class="control-label" for="edit-key">Key</label> 
         <input class="form-control form-text" type="text" id="insert-key" name="key" value="" size="60" maxlength="255">
       </div>
 
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <label class="control-label" for="edit-key">Value</label> 
         <input class="form-control form-text" type="text" id="insert-value" name="value" value="" size="60" maxlength="255">
       </div>
 
-    </div>
-
-      <div class="btn_gruop">
+      <div class="col-sm-4">
         <div><button type="submit" class="btn btn-success">Submit</button></div>
         <div><button type="submit" class="btn btn-warning">Reset</button></div>
       </div>
+
+    </div>
+
+     
   
 
 
