@@ -19,8 +19,12 @@
 
   th {
       background-color: #003366;
-      color: white;
+      color: white;   
   }
+  grid-result-data{
+    padding-top: 50px;
+  }
+  
 </style>
 </head>  
 	<body> 
@@ -44,7 +48,7 @@
         <input class="form-control form-text" type="text" id="insert-value" name="value" value="" size="60" maxlength="255">
       </div>
 
-      <div class="col-sm-4">
+      <div class="col-sm-4" style="padding-top: 25px">
         <div class="col-sm-2"><button type="submit" class="btn btn-success">Submit</button></div>
         <div class="col-sm-2"><button type="submit" class="btn btn-warning">Reset</button></div>
       </div>
