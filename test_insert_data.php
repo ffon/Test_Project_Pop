@@ -8,7 +8,7 @@
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
       <script>
 	      
-	      console.log("yes");
+	      
         // Initialize Firebase
         var config = {
           apiKey: "AIzaSyDd1JiN7FNLo9KvG9OCe1Mrn-ZB_9_bNFE",
@@ -21,12 +21,13 @@
         firebase.initializeApp(config);
 	      
 	  // ------  
+	      
 	var userDataRef = firebase.database().ref("ksbot-ecbd2").orderByKey();
 	userDataRef.once("value").then(function(snapshot) {
 	    snapshot.forEach(function(childSnapshot) {
 // 	      var key = childSnapshot.key;
 // 	      var childData = childSnapshot.val();              // childData will be the actual contents of the child
-
+console.log("yes");
 	      var name_val = childSnapshot.val().Name;
 	      var id_val = childSnapshot.val().AssignedID;
 	      console.log(name_val);
