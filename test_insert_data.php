@@ -25,7 +25,7 @@
 </style>
 </head>  
 	<body> 
-    5
+    
     <header class="header">   
     <div class="container-fluid">
       <h1>Data management</h1>
@@ -107,10 +107,11 @@
       // --------------  
       var ref = firebase.database().ref();
       var data_send = [];
-      var data = {};
+      var data;
       ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
         console.log(snapshot.val());
         data = snapshot.val();
+        console.log(data);
 
       }, function (error) {
         console.log("Error: " + error.code);
