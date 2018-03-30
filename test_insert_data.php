@@ -105,13 +105,13 @@
 
       // var push_Ref = ref("key3").set("value"); // เพิ่มข้อมูลลงใน file base
 
-      // ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
-      //   console.log('y');
-      //   console.log(snapshot.val());
+      ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
+        console.log('y');
+        console.log(snapshot.val());
 
-      // }, function (error) {
-      //   console.log("Error: " + error.code);
-      // })
+      }, function (error) {
+        console.log("Error: " + error.code);
+      })
 
       // var write_Ref = ref("a"); // แก้ไข้ข้อมูลใน a ที่ index 0 เป็น 1
       // write_Ref.update ({
