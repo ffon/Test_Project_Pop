@@ -108,8 +108,7 @@
       var ref = firebase.database().ref();
       var data_send = [];
       var data;
-      ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
-        console.log(snapshot.val());
+      var d = ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
         data = snapshot.val();
         console.log(data);
 
@@ -117,7 +116,7 @@
         console.log("Error: " + error.code);
       });
       console.log('********************');
-      console.log(data);
+      console.log(d);
       console.log('--------------------');
       for(var i = 0; i< data.length ; i++)
         {
