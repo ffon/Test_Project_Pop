@@ -19,7 +19,12 @@
 
     <div class="form-item form-type-textfield form-group">  
     <label class="control-label" for="edit-key">Key</label> 
-      <input class="form-control form-text" type="text" id="edit-key" name="key" value="" size="60" maxlength="255">
+      <input class="form-control form-text" type="text" id="insert-key" name="key" value="" size="60" maxlength="255">
+      <input class="form-control form-text" type="text" id="insert-value" name="value" value="" size="60" maxlength="255">
+    </div>
+
+    <div>
+      <button type="submit" class="btn btn-success">Submit</button>
     </div>
 
 
