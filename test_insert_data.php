@@ -38,10 +38,9 @@
 // 	   "0" : 1
 // 	});
 	      
-// 	var ref = new Firebase('ksbot-ecbd2.firebaseapp.com'); // เพิ่มข้อมูลลงใน file base
-	var push_Ref = firebase.database().ref();
+	var push_Ref = firebase.database().ref("key"); // เพิ่มข้อมูลลงใน file base
 	push_Ref.push ({
-	   key: "data",
+	  "data"
 	});
 	     
 	      
