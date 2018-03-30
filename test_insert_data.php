@@ -17,13 +17,11 @@
       padding: 8px;
   }
   tr:nth-child(even){background-color: #f2f2f2}
-
   th {
       background-color: #003366;
       color: white;   
   }
   
-
 </style>
 </head>  
 	<body> 
@@ -74,6 +72,9 @@
             <tbody>
               <!-- data -->
               <tr>
+              <?php 
+                $data = $_POST['str'];
+              ?>
                 <td class="id">1</td>
                 <td class="key">test_key</td>
                 <td class="value">test_value</td>
@@ -101,29 +102,42 @@
       messagingSenderId: "421898172154"
       };
       firebase.initializeApp(config);
-
       // --------------  
       var ref = firebase.database().ref();
+      var data_display;
+      ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
+
+        console.log('y');
+        console.log(snapshot.val());
+
+        data_display = snapshot.val();
+      }, function (error) {
+        console.log("Error: " + error.code);
+      })
+
+      var httpc = new XMLHttpRequest(); // simplified for clarity
+      var url = "test_insert_data.php";
+      httpc.open("POST", url, true); // sending as POST
+
+      httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      httpc.setRequestHeader("Content-Length", data_display.length); // POST request MUST have a Content-Length header (as per HTTP/1.1)
+
+      httpc.onreadystatechange = function() { //Call a function when the state changes.
+      if(httpc.readyState == 4 && httpc.status == 200) { // complete and no errors
+          alert(httpc.responseText); // some processing here, or whatever you want to do with the response
+          }
+      }
+      httpc.send(data_display);
+      
+
 
       // var push_Ref = ref("key3").set("value"); // เพิ่มข้อมูลลงใน file base
-
-      // ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
-      //   console.log('y');
-      //   console.log(snapshot.val());
-
-      // }, function (error) {
-      //   console.log("Error: " + error.code);
-      // })
-
       // var write_Ref = ref("a"); // แก้ไข้ข้อมูลใน a ที่ index 0 เป็น 1
       // write_Ref.update ({
       //   "0" : 1
       // });e
-
       // var push_Ref = ref("key3").set("value"); // เพิ่มข้อมูลลงใน file base
-
-      ref.child("key3").remove();    // ลบข้อมูลลงใน file base
-
+      // ref.child("key3").remove();    // ลบข้อมูลลงใน file base
     </script>
 	
   </body>  
