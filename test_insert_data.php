@@ -39,6 +39,8 @@
                   <th>ID</th>
                   <th>KEY</th>
                   <th>Value</th>
+                  <th>Created</th>
+                  <th>Operations</th>
                 </tr>
             </thead>
 
@@ -50,7 +52,8 @@
                 <td class="key">test_key</td>
                 <td class="value">test_value</td>
                 <td class="value">test_value</td>
-                <td class="value">test_value</td>
+                <td class="value">Created</td>
+                <td class="value">Operations</td>
               </tr>
 
             </tbody>
