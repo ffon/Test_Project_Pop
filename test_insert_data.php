@@ -34,7 +34,7 @@
 	})
 	      
 	var write_Ref = firebase.database().ref("a"); // แก้ไข้ข้อมูลใน a ที่ index 0 เป็น 1
-	johnRef.update ({
+	write_Ref.update ({
 	   "0" : 1
 	});
 	      
