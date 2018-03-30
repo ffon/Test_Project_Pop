@@ -21,31 +21,26 @@
         firebase.initializeApp(config);
 	      
 	  // ------  
-	// Import Admin SDK
-	var admin = require("firebase-admin");
 
-	// Get a database reference to our posts
-	var db = admin.database();
-	var ref = db.ref("server/saving-data/fireblog/posts");
-
-	// Attach an asynchronous callback to read the data at our posts reference
-	ref.on("value", function(snapshot) {
-	  console.log(snapshot.val());
-	}, function (errorObject) {
-	  console.log("The read failed: " + errorObject.code);
-	});	
-// 	var database = firebase.database();
-// 	var leadsRef = database.ref('ksbot-ecbd2');
-// 	var newClientKey = database.ref().child('ksbot-ecbd2').push().key;
-// 	leadsRef.on('value', function(snapshot) {
+	      
+	var database = firebase.database();
+	var leadsRef = database.ref('ksbot-ecbd2');
+	var newClientKey = database.ref().child('ksbot-ecbd2').push().key;
+	console.log(newClientKey);
+	
+	leadsRef.on('child_added', function(snapshot) {
+		console.log("YY");
+	  	console.log(snapshot);
+	});	     
+	
+	leadsRef.on('value', function(snapshot) {
+		console.log("YYY");
+		console.log(snapshot);
 // 	    snapshot.forEach(function(childSnapshot) {
 // 	      var childData = childSnapshot.val();
 // 	    });
-// 	});
-// 	leadsRef.on('child_added', function(snapshot) {
-// 		var newPost = snapshot.val();
-// 	  	console.log(newPost);
-// 	});
+	});
+	
 	      
 	      
 // 	DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
