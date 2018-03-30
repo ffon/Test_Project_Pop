@@ -38,7 +38,7 @@
 // 	   "0" : 1
 // 	});
 	      
-	var push_Ref = firebase.database().ref("key1").push ("data1"); // เพิ่มข้อมูลลงใน file base
+	var push_Ref = firebase.database().ref("id").push ({"key":"value"}); // เพิ่มข้อมูลลงใน file base
 	
 	     
 	      
