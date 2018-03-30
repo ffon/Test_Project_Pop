@@ -1,6 +1,6 @@
 <html> 
 <head> 
-<title>1Data management</title>  
+<title>Data management</title>  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -74,7 +74,7 @@
               <tr>
               <?php 
                 $data = $_POST['str'];
-		 var_dump($data);
+		            var_dump($data);
               ?>
                 <td class="id">1</td>
                 <td class="key">test_key</td>
@@ -95,41 +95,49 @@
         
       // Initialize Firebase
       var config = {
-      apiKey: "AIzaSyDd1JiN7FNLo9KvG9OCe1Mrn-ZB_9_bNFE",
-      authDomain: "ksbot-ecbd2.firebaseapp.com",
-      databaseURL: "https://ksbot-ecbd2.firebaseio.com",
-      projectId: "ksbot-ecbd2",
-      storageBucket: "ksbot-ecbd2.appspot.com",
-      messagingSenderId: "421898172154"
+        apiKey: "AIzaSyDd1JiN7FNLo9KvG9OCe1Mrn-ZB_9_bNFE",
+        authDomain: "ksbot-ecbd2.firebaseapp.com",
+        databaseURL: "https://ksbot-ecbd2.firebaseio.com",
+        projectId: "ksbot-ecbd2",
+        storageBucket: "ksbot-ecbd2.appspot.com",
+        messagingSenderId: "421898172154"
       };
       firebase.initializeApp(config);
+
       // --------------  
       var ref = firebase.database().ref();
-      var data_display;
+      var data_send = [];
+      var data;
       ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
-
-        console.log('y');
         console.log(snapshot.val());
+        data = snapshot.val();
 
-        data_display = snapshot.val();
+        for(var i = 0; i< data.length ; i++)
+        {
+          console.log(data[i]); 
+          console.log(data[i].date); 
+          console.log('------------'); 
+          console.log(i); 
+        }
       }, function (error) {
         console.log("Error: " + error.code);
       })
 
-      var httpc = new XMLHttpRequest(); // simplified for clarity
-      var url = "https://test-project-pop.herokuapp.com/test_insert_data.php";
-      httpc.open("POST", url, true); // sending as POST
+      // var data_job_send = {};
+      // data_job_send.data = JSON.stringify(datas);
 
-      httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-      httpc.setRequestHeader("Content-Length", data_display); // POST request MUST have a Content-Length header (as per HTTP/1.1)
-
-      httpc.onreadystatechange = function() { //Call a function when the state changes.
-      if(httpc.readyState == 4 && httpc.status == 200) { // complete and no errors
-          alert(httpc.responseText); // some processing here, or whatever you want to do with the response
-          }
-      }
-      httpc.send(data_display);
-      
+      // if(j_check != 0)// if select job
+      // {
+      //     $.post("/dx_vrp6/get_data_js",data_job_send,function(data_status)
+      //     {
+      //         window.location.href = "/transport";
+      //     })
+      //     $('#button-create-transpot').attr("disabled","disabled"); // disabled btn
+      // }
+      // else
+      // {
+      //     alert('Please select job for create transport.');
+      // }  
 
 
       // var push_Ref = ref("key3").set("value"); // เพิ่มข้อมูลลงใน file base
