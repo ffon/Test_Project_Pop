@@ -1,4 +1,5 @@
-function myFunction() {
+
+console.log("1");
     // Initialize Firebase
       var config = {
         apiKey: "AIzaSyDd1JiN7FNLo9KvG9OCe1Mrn-ZB_9_bNFE",
@@ -37,7 +38,4 @@ function myFunction() {
       });
      
      console.log(data_array);
-      var data_send = {};
-}
 
-myFunction();
