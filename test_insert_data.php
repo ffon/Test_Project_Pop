@@ -19,22 +19,19 @@
         firebase.initializeApp(config);
 	      
 	  // ------  
-	  var rootRef = firebase.database().ref();
-          var storesRef = rootRef.child('Lorelle/Visitors');
-          var newStoreRef = storesRef.push();
-          newStoreRef.set($scope.CarModal,
-            function(error) {
-              //NOTE: this completion has a bug, I need to fix.
-              if (error) {
-                   console.log("Data could not be saved." + error);
-                   Materialize.toast('Error: Failed to Submit' + error, 2000);
-              } else {
-                 console.log("Data saved successfully.");
-                 Materialize.toast('Data Submitted, Thank You.', 2000);
+	// Import Admin SDK
+	var admin = require("firebase-admin");
 
-                   }
-                });
-             }
+	// Get a database reference to our posts
+	var db = admin.database();
+	var ref = db.ref("server/saving-data/fireblog/posts");
+
+	// Attach an asynchronous callback to read the data at our posts reference
+	ref.on("value", function(snapshot) {
+	  console.log(snapshot.val());
+	}, function (errorObject) {
+	  console.log("The read failed: " + errorObject.code);
+	});
       </script>
 	
     </body>  
