@@ -78,7 +78,7 @@
                 <td class="key">test_key</td>
                 <td class="value">test_value</td>
                 <td class="created">Created</td>
-                <td class="operations"<i class="material-icons" style="font-size:48px;color:red">delete</i> &nbsp </td>
+                <td class="operations"><i class="glyphicon glyphicon-pencil"></i></td>
               </tr>
 
             </tbody>
