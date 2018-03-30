@@ -107,24 +107,30 @@
       // --------------  
       var ref = firebase.database().ref();
       var data_send = [];
-      var data;
-      var d = ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
+      var data = {};
+      ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
         data = snapshot.val();
         console.log(data);
 
-      }, function (error) {
-        console.log("Error: " + error.code);
-      });
-      console.log('********************');
-      console.log(d);
-      console.log('--------------------');
-      for(var i = 0; i< data.length ; i++)
+        for(var i = 0; i< data.length ; i++)
         {
-          console.log(data[i]); 
+          console.log(data[i].key); 
           console.log(data[i].date); 
           console.log('------------'); 
-          console.log(i); 
+          // console.log(data[i].value); 
         }
+
+      }, function (error) {
+        alert("Error: " + error.code);
+      });
+     
+      // for(var i = 0; i< data.length ; i++)
+      //   {
+      //     console.log(data[i]); 
+      //     console.log(data[i].date); 
+      //     console.log('------------'); 
+      //     console.log(i); 
+      //   }
 
       // var data_job_send = {};
       // data_job_send.data = JSON.stringify(datas);
