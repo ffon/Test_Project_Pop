@@ -21,9 +21,6 @@
       background-color: #003366;
       color: white;   
   }
-  grid-result-data{
-    padding-top: 50px;
-  }
   
 </style>
 </head>  
@@ -60,7 +57,7 @@
 
 
     <div class="grid-result-data">
-      <div class="table-responsive-report" style="padding: 10px 15px 10px 15px;">
+      <div class="table-responsive-report" style="padding: 50px 15px 10px 15px;">
         <table class="clickable table table-hover table-striped sticky-enabled tableheader-processed sticky-table" id="table-vehicle">
             <thead>
                 <tr>
