@@ -22,11 +22,10 @@
 	      
 	  // ------  
 	var userDataRef = firebase.database().ref("ksbot-ecbd2").orderByKey();
-	userDataRef.once("value")
-	  .then(function(snapshot) {
+	userDataRef.once("value").then(function(snapshot) {
 	    snapshot.forEach(function(childSnapshot) {
-	      var key = childSnapshot.key;
-	      var childData = childSnapshot.val();              // childData will be the actual contents of the child
+// 	      var key = childSnapshot.key;
+// 	      var childData = childSnapshot.val();              // childData will be the actual contents of the child
 
 	      var name_val = childSnapshot.val().Name;
 	      var id_val = childSnapshot.val().AssignedID;
@@ -34,7 +33,6 @@
 	      console.log(id_val);
 	  });
 	 });
-	}());
 	      
 // 	var database = firebase.database();
 // 	var leadsRef = database.ref('ksbot-ecbd2');
