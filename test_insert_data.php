@@ -1,5 +1,5 @@
 <html>  
-    <head>  test23
+    <head>  test2
 	<title>Save to Data file using PHP</title>  
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
@@ -27,17 +27,18 @@
 	var leadsRef = database.ref('ksbot-ecbd2');
 	var newClientKey = database.ref().child('ksbot-ecbd2').push().key;
 	console.log(newClientKey);
-	
-	     
-	
+	var childData;
+	var childKey;
 	leadsRef.on('value', function(snapshot) {
 		console.log("YYY");
-		console.log(snapshot);
+		
 	    snapshot.forEach(function(childSnapshot) {
-	      var childData = childSnapshot.val();
-		    console.log('----------------');
-		    console.log(childData);
+	      	childKey  = childSnapshot.key;
+    		childData = childSnapshot.val();
+		console.log(childData);
+		console.log('---------------');
 	    });
+		console.log(childData);
 	});
 	
 	      
