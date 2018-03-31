@@ -116,8 +116,11 @@
 
       var line = document.createElement("p");
       line.innerHTML = "<a class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'></a>";
-      // document.getElementById("messages").appendChild(line);
+     
 
+
+      console.log(lineline.innerHTML);
+      console.log(lineline);
 
       ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
         data = snapshot.val();
@@ -142,7 +145,7 @@
           c_key.appendChild(document.createTextNode(key));
           c_date.appendChild(document.createTextNode(date));
           c_value.appendChild(document.createTextNode(value));
-          c_operations.document.getElementById('o-id').appendChild(line);
+          c_operations.appendChild(line.innerHTML);
 
 
           // var data_g = {};
