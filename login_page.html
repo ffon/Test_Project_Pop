@@ -129,11 +129,6 @@ span.psw {
 <div>
          <!-- action="/test_insert_data.html"  -->
   <form class="modal-content"  method="post"> 
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div>
-
     <div class="container">
       <label for="uname"><b>Username</b></label>
       <input id="name" type="text" placeholder="Enter Username" name="uname" required>
@@ -156,16 +151,17 @@ span.psw {
 
     // });
     console.log(name);
+    console.log(name.value);
     console.log(pass);
+    console.log(pass.value);
+    console.log(btn);
     
-    btn.onclick(function(){
-        console.log('yes');
-    });
+  
     // if(name == 'admin' && pass == '8888')
     // {
     //     window.location.href = "/test_insert_data.html";
     // }else{
-    //     atert("User name or password is not correct");
+    //     alert("User name or password is not correct");
     // }
 
 
