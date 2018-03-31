@@ -139,21 +139,32 @@ span.psw {
       <input id="name" type="text" placeholder="Enter Username" name="uname" required>
       <label for="psw"><b>Password</b></label>
       <input id="pass" type="password" placeholder="Enter Password" name="pass" required>
-      <button type="submit">Login</button>
+      <button type="button" id="btn-login">Login</button>
     </div>
   </form>
 </div>
 
 <script>
 
+    console.log('2');
+    var btn = document.getElementById('btn-login');
     var name = document.getElementById('name');
     var pass = document.getElementById('pass');
-    if(name == 'admin' && pass == '8888')
-    {
-        window.location.href = "/test_insert_data.html";
-    }else{
-        atert("User name or password is not correct");
-    }
+
+    // $('#button-create-transpot').on('click',function()
+    // {
+
+    // });
+    btn.onclick(function(){
+        console.log('yes');
+    });
+    // if(name == 'admin' && pass == '8888')
+    // {
+    //     window.location.href = "/test_insert_data.html";
+    // }else{
+    //     atert("User name or password is not correct");
+    // }
+
 
 // Get the modal
 // var modal = document.getElementById('id01');
