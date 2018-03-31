@@ -125,13 +125,13 @@
           var c_key = row.insertCell(1);
           var c_date = row.insertCell(2);
           var c_value = row.insertCell(3);
-          var c_o = row.insertCell(4);  
+//           var c_o = row.insertCell(4);  
 
           c_id.appendChild(document.createTextNode(id));
           c_key.appendChild(document.createTextNode(key));
           c_date.appendChild(document.createTextNode(date));
           c_value.appendChild(document.createTextNode(value));
-          c_o.appendChild(document.createTextNode(id));
+//           c_o.appendChild(document.createTextNode(id));
 
 
           // var data_g = {};
