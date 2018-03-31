@@ -72,19 +72,25 @@ button {
 
     var uname = document.getElementById('name');
     var pass = document.getElementById('pass');
+    console.log(uname.value);
+    console.log(pass.value);
 
-    $('#btn-lo').on('click',function()
-    {
+    document.getElementById('btn-login').onclick = function() {
+        console.log('1');
         if(uname == 'admin' && pass == '8888')
         {
             window.location.href = "/test_insert_data.html";
+
         }else{
             alert("User name or password is not correct");
         }
+    }​;​
+    $('#btn-login').on('click',function()
+    {
+       console.log('2')
     });
 
-    console.log(uname.value);
-    console.log(pass.value);
+
     
   
     
