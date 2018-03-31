@@ -59,10 +59,10 @@ button {
   <form class="modal-content"> 
     <div class="container">
       <label for="name"><b>Username</b></label>
-      <input id="name" value="ffon" type="text" placeholder="Enter Username" name="uname" required>
+      <input id="name" type="text" placeholder="Enter Username" name="uname" required>
 
       <label for="psw"><b>Password</b></label>
-      <input id="pass" value="123" type="password" placeholder="Enter Password" name="pass" required>
+      <input id="pass" type="password" placeholder="Enter Password" name="pass" required>
       <button type="button" id="btn-login">Login</button>
     </div>
   </form>
@@ -70,27 +70,24 @@ button {
 
 <script>
 
-    var btn  = document.getElementById('btn-login');
     var uname = document.getElementById('name');
     var pass = document.getElementById('pass');
 
-    // $('#button-create-transpot').on('click',function()
-    // {
+    $('#btn-lo').on('click',function()
+    {
+        if(uname == 'admin' && pass == '8888')
+        {
+            window.location.href = "/test_insert_data.html";
+        }else{
+            alert("User name or password is not correct");
+        }
+    });
 
-    // });
-    console.log(uname);
     console.log(uname.value);
-    console.log(pass);
     console.log(pass.value);
-    console.log(btn);
     
   
-    // if(name == 'admin' && pass == '8888')
-    // {
-    //     window.location.href = "/test_insert_data.html";
-    // }else{
-    //     alert("User name or password is not correct");
-    // }
+    
 
 
 // Get the modal
