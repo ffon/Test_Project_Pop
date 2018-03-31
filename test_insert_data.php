@@ -25,7 +25,7 @@
 </style>
 </head>  
 	<body> 
-    1
+    9
     <header class="header">   
     <div class="container-fluid">
       <h1>Data management</h1>
@@ -73,7 +73,7 @@
                 <td class="key"></td>
                 <td class="value"></td>
                 <td class="created"></td>
-                <td class="operations"></td>
+                <td class="operations" id="o-id"></td>
               </tr>
 
             </tbody>
@@ -108,6 +108,17 @@
       var key; 
       var date; 
       var value; 
+      String s = "<a class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'></a> &nbsp &nbsp"+ 
+      "<a class='glyphicon glyphicon-trash' href='https://www.w3schools.com/html/'></a>";
+
+      // var line = document.createElement("a");
+      // line.innerHTML = "class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'" ;
+      
+
+      // var line = document.createElement("p");
+      // line.innerHTML = "<strong>" + name + ": </strong>" + message.field_message_body.und[0].value;
+      // document.getElementById("messages").appendChild(line);
+
 
       ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
         data = snapshot.val();
@@ -132,7 +143,7 @@
           c_key.appendChild(document.createTextNode(key));
           c_date.appendChild(document.createTextNode(date));
           c_value.appendChild(document.createTextNode(value));
-          c_operations.append("<a class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'></a> &nbsp &nbsp <a class='glyphicon glyphicon-trash' href='https://www.w3schools.com/html/'></a>");
+          c_operations.appendChild(s.innerHTML);
 
 
           // var data_g = {};
