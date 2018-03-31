@@ -128,10 +128,11 @@ span.psw {
 <body>
 <div>
          <!-- action="/test_insert_data.html"  -->
-  <form class="modal-content"  method="post"> 
+  <form class="modal-content"> 
     <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input id="u_name" value="ffon" type="text" placeholder="Enter Username" name="name" required>
+      <label for="name"><b>Username</b></label>
+      <input id="u-name" value="ffon" type="text" placeholder="Enter Username" name="uname" required>
+
       <label for="psw"><b>Password</b></label>
       <input id="pass" value="123" type="password" placeholder="Enter Password" name="pass" required>
       <button type="button" id="btn-login">Login</button>
@@ -142,8 +143,8 @@ span.psw {
 <script>
 
     console.log('2');
-    var btn = document.getElementById('btn-login');
-    var name = document.getElementsByName('u_name');
+    var btn  = document.getElementById('btn-login');
+    var name = document.getElementById('u-name');
     var pass = document.getElementById('pass');
 
     // $('#button-create-transpot').on('click',function()
