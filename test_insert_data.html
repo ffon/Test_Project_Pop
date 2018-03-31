@@ -97,10 +97,11 @@
       display_data();
 
 
-      var ref = firebase.database().ref();
+      
 
       function display_data()
       {
+        var ref = firebase.database().ref();
         var data_array = [];
         var data = {};
         var tbId = document.getElementById('table-list');
@@ -112,6 +113,7 @@
         var value; 
       
         // อ่านค่าและแสดงผลในตางรางจาก filebase
+        
         ref.on("value", function(snapshot) { 
           data = snapshot.val(); // เก็บข้อมูลที่ได้จาก firebase ไว้ที่ตัวแปร data
 
