@@ -108,16 +108,8 @@
       var key; 
       var date; 
       var value; 
-      String s = "<a class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'></a> &nbsp &nbsp"+ 
-      "<a class='glyphicon glyphicon-trash' href='https://www.w3schools.com/html/'></a>";
+      String s = "<a class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'></a> &nbsp &nbsp<a class='glyphicon glyphicon-trash' href='https://www.w3schools.com/html/'></a>";
 
-      // var line = document.createElement("a");
-      // line.innerHTML = "class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'" ;
-      
-
-      // var line = document.createElement("p");
-      // line.innerHTML = "<strong>" + name + ": </strong>" + message.field_message_body.und[0].value;
-      // document.getElementById("messages").appendChild(line);
 
 
       ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
