@@ -124,17 +124,16 @@
       console.log('-----------------');
 
      // disply data to table
-     ref.once("value",function(snapshot){
-	     
-        console.log(snapshot);
-	     
-//       snapshot.foreach(function(childSnapshot)){
-//         var child_key = childSnapshot.key;
-//         var child_data = childSnapshot.val();
+    ref.once("value",function(snapshot){
 
-//         console.log(child_key);
-//         console.log(child_data);
-//       }
+      console.log(snapshot);
+      snapshot.forEach(function(childSnapshot)){
+        var child_key = childSnapshot.key;
+        var child_data = childSnapshot.val();
+
+        console.log(child_key);
+        console.log(child_data);
+      }
 
      });
 
