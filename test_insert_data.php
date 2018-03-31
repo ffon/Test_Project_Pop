@@ -124,7 +124,7 @@
           date  = data[i].date; 
           value = data[i].value; 
           var line = document.createElement("p");
-      	  line.innerHTML = "<a class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'></a>";
+      	  line.innerHTML = "<a class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'></a> &nbsp &nbsp<a class='glyphicon glyphicon-trash' href='https://www.w3schools.com/html/'></a>";
 
           var row 	= tbId.insertRow(i);
           var c_id 	= row.insertCell(0);
