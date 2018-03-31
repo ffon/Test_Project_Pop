@@ -108,7 +108,7 @@
       var key; 
       var date; 
       var value; 
-      String s = "<a class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'></a> &nbsp &nbsp<a class='glyphicon glyphicon-trash' href='https://www.w3schools.com/html/'></a>";
+      var s = "<a class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'></a> &nbsp &nbsp<a class='glyphicon glyphicon-trash' href='https://www.w3schools.com/html/'></a>"
 
 
 
