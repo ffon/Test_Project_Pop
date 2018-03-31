@@ -124,7 +124,7 @@
       console.log('-----------------');
 
      // disply data to table
-     ref.once('value',function(snapshot){
+     ref.once("value",function(snapshot){
       snapshot.foreach(function(childSnapshot)){
         var child_key = childSnapshot.key;
         var child_data = childSnapshot.val();
