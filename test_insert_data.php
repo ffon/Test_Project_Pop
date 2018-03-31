@@ -130,14 +130,14 @@
         alert("Error: " + error.code);
       });
      
-     console.log(data_array);
-      var data_send = {};
-      data_send.data = JSON.stringify(data_array);
+//       console.log(data_array);
+//       var data_send = {};
+//       data_send.data = JSON.stringify(data_array);
 
-      $.post("https://test-project-pop.herokuapp.com/test_insert_data.php",data_send,function(data_status)
-      {
-        window.location.href = "https://test-project-pop.herokuapp.com/test_insert_data.php";
-      })
+//       $.post("https://test-project-pop.herokuapp.com/test_insert_data.php",data_send,function(data_status)
+//       {
+//         window.location.href = "https://test-project-pop.herokuapp.com/test_insert_data.php";
+//       })
     
 
 
