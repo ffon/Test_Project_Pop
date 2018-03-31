@@ -25,7 +25,7 @@
 </style>
 </head>  
 	<body> 
-    9
+    1
     <header class="header">   
     <div class="container-fluid">
       <h1>Data management</h1>
@@ -132,7 +132,7 @@
           c_key.appendChild(document.createTextNode(key));
           c_date.appendChild(document.createTextNode(date));
           c_value.appendChild(document.createTextNode(value));
-          c_operations.appendChild(document.createTextNode("<a class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'></a> &nbsp &nbsp <a class='glyphicon glyphicon-trash' href='https://www.w3schools.com/html/'></a>"));
+          c_operations.appendChild("<a class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'></a> &nbsp &nbsp <a class='glyphicon glyphicon-trash' href='https://www.w3schools.com/html/'></a>");
 
 
           // var data_g = {};
