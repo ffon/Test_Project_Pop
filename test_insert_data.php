@@ -126,11 +126,10 @@
           var c_date = row.insertCell(2);
           var c_value = row.insertCell(3);
 
-          c_id.appendChile(document.createTextNode(id));
-          c_key.appendChile(document.createTextNode(key));
-          c_date.appendChile(document.createTextNode(date));
-          c_value.appendChile(document.createTextNode(value));
-
+          c_id.appendChild(document.createTextNode(id));
+          c_key.appendChild(document.createTextNode(key));
+          c_date.appendChild(document.createTextNode(date));
+          c_value.appendChild(document.createTextNode(value));
 
           // var data_g = {};
           // data_g.id    = i+1;
