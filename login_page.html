@@ -113,7 +113,7 @@ span.psw {
     to {transform: scale(1)}
 }
 
-/* Change styles for span and cancel button on extra small screens */
+/* Change styles for span and cancel button on extra small screens */ 
 @media screen and (max-width: 300px) {
     span.psw {
        display: block;
@@ -126,40 +126,35 @@ span.psw {
 </style>
 </head>
 <body>
-
-<!-- <h2>Modal Login Form</h2> -->
-
-<!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
-
 <div>
-  
-  <form class="animate" action="/test_insert_data.html" method="post">
-    <!-- <div class="imgcontainer">
+         <!-- action="/test_insert_data.html"  -->
+  <form class="modal-content"  method="post"> 
+    <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div> -->
+    </div>
 
     <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
+      <input id="name" type="text" placeholder="Enter Username" name="uname" required>
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="pass" required>
-        
+      <input id="pass" type="password" placeholder="Enter Password" name="pass" required>
       <button type="submit">Login</button>
-      <!-- <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label> -->
     </div>
-
-    <!-- <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> 
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div> -->
   </form>
 </div>
 
 <script>
+
+    var name = document.getElementById('name');
+    var pass = document.getElementById('pass');
+    if(name == 'admin' && pass == '8888')
+    {
+        window.location.href = "/test_insert_data.html";
+    }else{
+        atert("User name or password is not correct");
+    }
+
 // Get the modal
 // var modal = document.getElementById('id01');
 
