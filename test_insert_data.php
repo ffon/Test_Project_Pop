@@ -25,7 +25,7 @@
 </style>
 </head>  
 	<body> 
-    1
+    9
     <header class="header">   
     <div class="container-fluid">
       <h1>Data management</h1>
@@ -69,10 +69,10 @@
               <!-- data -->
               <tr>
          
-                <td class="id">1</td>
-                <td class="key">test_key</td>
-                <td class="value">test_value</td>
-                <td class="created">Created</td>
+                <td class="id"></td>
+                <td class="key"></td>
+                <td class="value"></td>
+                <td class="created"></td>
                 <td class="operations"><a class="glyphicon glyphicon-pencil" href="https://www.w3schools.com/html/"></a> &nbsp &nbsp <a class="glyphicon glyphicon-trash" href="https://www.w3schools.com/html/"></a></td>
               </tr>
 
@@ -130,6 +130,7 @@
           c_key.appendChild(document.createTextNode(key));
           c_date.appendChild(document.createTextNode(date));
           c_value.appendChild(document.createTextNode(value));
+
 
           // var data_g = {};
           // data_g.id    = i+1;
