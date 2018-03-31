@@ -52,10 +52,6 @@
 
     </div>
 
-        
-  
-
-
     <div class="grid-result-data" >
       <div class="table-responsive-report" style="padding: 70px 15px 10px 15px;">
         <table class="clickable table table-hover table-striped sticky-enabled tableheader-processed sticky-table" id="table-vehicle">
@@ -72,13 +68,7 @@
             <tbody>
               <!-- data -->
               <tr>
-              <?php 
-                $data = isset($_POST['data']) ? $_POST['data'] : null; // get data from js
-                $decode_data = json_decode($data);
-
-                var_dump($data);
-                var_dump($decode_data);
-              ?>
+         
                 <td class="id">1</td>
                 <td class="key">test_key</td>
                 <td class="value">test_value</td>
@@ -94,7 +84,7 @@
 
     </div>
  
-    <script>
+    <script> 
         
       // Initialize Firebase
       var config = {
@@ -118,6 +108,7 @@
         for(var i = 0; i< data.length ; i++)
         {
           var data_g = {};
+
             data_g.id    = i+1;
             data_g.key   = data[i].key; 
             data_g.date  = data[i].date; 
@@ -130,14 +121,29 @@
         alert("Error: " + error.code);
       });
      
-//       console.log(data_array);
-//       var data_send = {};
-//       data_send.data = JSON.stringify(data_array);
+      console.log('-----------------');
 
-//       $.post("https://test-project-pop.herokuapp.com/test_insert_data.php",data_send,function(data_status)
-//       {
-//         window.location.href = "https://test-project-pop.herokuapp.com/test_insert_data.php";
-//       })
+     // disply data to table
+     ref.once('value',function(snapshot){
+      snapshot.foreach(function(childSnapshot)){
+        var child_key = childSnapshot.key;
+        var child_data = childSnapshot.val();
+
+        console.log(child_key);
+        console.log(child_data);
+      }
+
+     });
+
+
+      // console.log(data_array);
+      // var data_send = {};
+      // data_send.data = JSON.stringify(data_array);
+
+      // $.post("https://test-project-pop.herokuapp.com/test_insert_data.php",data_send,function(data_status)
+      // {
+      //   window.location.href = "https://test-project-pop.herokuapp.com/test_insert_data.php";
+      // })
     
 
 
