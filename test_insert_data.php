@@ -108,19 +108,10 @@
       var key; 
       var date; 
       var value; 
-      // String s = "<a class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'></a> &nbsp &nbsp<a class='glyphicon glyphicon-trash' href='https://www.w3schools.com/html/'></a>";
-
-      // var line = document.createElement("a");
-      // line.innerHTML = "class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'" ;
-      
-
-      var line = document.createElement("p");
-      line.innerHTML = "<a class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'></a>";
      
 
-
-      console.log(line.innerHTML);
-      console.log(line);
+    
+    
 
       ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
         data = snapshot.val();
@@ -132,13 +123,14 @@
           key   = data[i].key; 
           date  = data[i].date; 
           value = data[i].value; 
-          
+          var line = document.createElement("p");
+      	  line.innerHTML = "<a class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'></a>";
 
-          var row = tbId.insertRow(i);
-          var c_id = row.insertCell(0);
-          var c_key = row.insertCell(1);
-          var c_value = row.insertCell(2);
-          var c_date = row.insertCell(3);
+          var row 	= tbId.insertRow(i);
+          var c_id 	= row.insertCell(0);
+          var c_key 	= row.insertCell(1);
+          var c_value 	= row.insertCell(2);
+          var c_date 	= row.insertCell(3);
           var c_operations = row.insertCell(4);  
 
           c_id.appendChild(document.createTextNode(id));
@@ -146,32 +138,12 @@
           c_date.appendChild(document.createTextNode(date));
           c_value.appendChild(document.createTextNode(value));
           c_operations.append(line);
-
-
-          // var data_g = {};
-          // data_g.id    = i+1;
-          // data_g.key   = data[i].key; 
-          // data_g.date  = data[i].date; 
-          // data_g.value = data[i].value; 
-          // data_array.push(data_g);
         }
 
       }, function (error) {
         alert("Error: " + error.code);
       });
      
-
-      // console.log(data_array);
-      // var data_send = {};
-      // data_send.data = JSON.stringify(data_array);
-
-      // $.post("https://test-project-pop.herokuapp.com/test_insert_data.php",data_send,function(data_status)
-      // {
-      //   window.location.href = "https://test-project-pop.herokuapp.com/test_insert_data.php";
-      // })
-    
-
-
       // var push_Ref = ref("key3").set("value"); // เพิ่มข้อมูลลงใน file base
       // var write_Ref = ref("a"); // แก้ไข้ข้อมูลใน a ที่ index 0 เป็น 1
       // write_Ref.update ({
@@ -179,6 +151,7 @@
       // });e
       // var push_Ref = ref("key3").set("value"); // เพิ่มข้อมูลลงใน file base
       // ref.child("key3").remove();    // ลบข้อมูลลงใน file base
+	    
     </script>
 	
   </body>  
