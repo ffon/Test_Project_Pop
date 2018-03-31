@@ -25,7 +25,7 @@
 </style>
 </head>  
 	<body> 
-    9
+    1
     <header class="header">   
     <div class="container-fluid">
       <h1>Data management</h1>
@@ -54,7 +54,7 @@
 
     <div class="grid-result-data" >
       <div class="table-responsive-report" style="padding: 70px 15px 10px 15px;">
-        <table class="clickable table table-hover table-striped sticky-enabled tableheader-processed sticky-table" id="table-vehicle">
+        <table class="clickable table table-hover table-striped sticky-enabled tableheader-processed sticky-table" id="table-list">
             <thead>
                 <tr>
                   <th>ID</th>
@@ -101,42 +101,49 @@
       var ref = firebase.database().ref();
       var data_array = [];
       var data = {};
+      var tbId = document.getElementById('table-list');
+      var rowIndex = 1;
+
+      var id;
+      var key; 
+      var date; 
+      var value; 
+
       ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
         data = snapshot.val();
         console.log(data);
 
         for(var i = 0; i< data.length ; i++)
         {
-          var data_g = {};
+          id    = i+1;
+          key   = data[i].key; 
+          date  = data[i].date; 
+          value = data[i].value; 
 
-            data_g.id    = i+1;
-            data_g.key   = data[i].key; 
-            data_g.date  = data[i].date; 
-            data_g.value = data[i].value; 
+          var row = tbId.insertRow(i);
+          var c_id = row.insertCell(0);
+          var c_key = row.insertCell(1);
+          var c_date = row.insertCell(2);
+          var c_value = row.insertCell(3);
 
-            data_array.push(data_g);
+          c_id.appendChile(document.createTextNode(id));
+          c_key.appendChile(document.createTextNode(key));
+          c_date.appendChile(document.createTextNode(date));
+          c_value.appendChile(document.createTextNode(value));
+
+
+          // var data_g = {};
+          // data_g.id    = i+1;
+          // data_g.key   = data[i].key; 
+          // data_g.date  = data[i].date; 
+          // data_g.value = data[i].value; 
+          // data_array.push(data_g);
         }
 
       }, function (error) {
         alert("Error: " + error.code);
       });
      
-      console.log('-----------------');
-
-     // disply data to table
-    ref.once("value",function(snapshot){
-
-      console.log(snapshot);
-      snapshot.forEach(function(childSnapshot)){
-        var child_key = childSnapshot.key;
-        var child_data = childSnapshot.val();
-
-        console.log(child_key);
-        console.log(child_data);
-      }
-
-     });
-
 
       // console.log(data_array);
       // var data_send = {};
