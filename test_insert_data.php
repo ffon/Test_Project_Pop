@@ -142,7 +142,7 @@
           c_key.appendChild(document.createTextNode(key));
           c_date.appendChild(document.createTextNode(date));
           c_value.appendChild(document.createTextNode(value));
-          document.getElementById('o-id').appendChild(line);
+          c_operations.document.getElementById('o-id').appendChild(line);
 
 
           // var data_g = {};
