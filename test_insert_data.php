@@ -54,7 +54,7 @@
 
     <div class="grid-result-data" >
       <div class="table-responsive-report" style="padding: 70px 15px 10px 15px;">
-        <table class="clickable table table-hover table-striped sticky-enabled tableheader-processed sticky-table" id="table-list">
+        <table class="clickable table table-hover table-striped sticky-enabled tableheader-processed sticky-table" >
             <thead>
                 <tr>
                   <th>ID</th>
@@ -65,7 +65,7 @@
                 </tr>
             </thead>
   
-            <tbody>
+            <tbody id="table-list">
               <!-- data -->
               <tr>
          
