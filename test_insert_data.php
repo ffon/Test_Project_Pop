@@ -119,8 +119,8 @@
      
 
 
-      console.log(lineline.innerHTML);
-      console.log(lineline);
+      console.log(line.innerHTML);
+      console.log(line);
 
       ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
         data = snapshot.val();
