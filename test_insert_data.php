@@ -115,7 +115,7 @@
       
 
       var line = document.createElement("p");
-      line.innerHTML = "<strong>" + 'TEST' + ": </strong>";
+      line.innerHTML = "<a class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'></a>";
       // document.getElementById("messages").appendChild(line);
 
 
