@@ -73,7 +73,7 @@
                 <td class="key"></td>
                 <td class="value"></td>
                 <td class="created"></td>
-                <td class="operations"><a class="glyphicon glyphicon-pencil" href="https://www.w3schools.com/html/"></a> &nbsp &nbsp <a class="glyphicon glyphicon-trash" href="https://www.w3schools.com/html/"></a></td>
+                <td class="operations"></td>
               </tr>
 
             </tbody>
@@ -119,19 +119,20 @@
           key   = data[i].key; 
           date  = data[i].date; 
           value = data[i].value; 
+          
 
           var row = tbId.insertRow(i);
           var c_id = row.insertCell(0);
           var c_key = row.insertCell(1);
-          var c_date = row.insertCell(2);
-          var c_value = row.insertCell(3);
-//           var c_o = row.insertCell(4);  
+          var c_value = row.insertCell(2);
+          var c_date = row.insertCell(3);
+          var c_operations = row.insertCell(4);  
 
           c_id.appendChild(document.createTextNode(id));
           c_key.appendChild(document.createTextNode(key));
           c_date.appendChild(document.createTextNode(date));
           c_value.appendChild(document.createTextNode(value));
-//           c_o.appendChild(document.createTextNode(id));
+          c_operations.appendChild(document.createTextNode('<a class="glyphicon glyphicon-pencil" href="https://www.w3schools.com/html/"></a> &nbsp &nbsp <a class="glyphicon glyphicon-trash" href="https://www.w3schools.com/html/"></a>'));
 
 
           // var data_g = {};
