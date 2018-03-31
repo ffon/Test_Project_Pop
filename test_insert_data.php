@@ -25,7 +25,7 @@
 </style>
 </head>  
 	<body> 
-    1
+    9
     <header class="header">   
     <div class="container-fluid">
       <h1>Data management</h1>
@@ -108,9 +108,16 @@
       var key; 
       var date; 
       var value; 
+      // String s = "<a class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'></a> &nbsp &nbsp<a class='glyphicon glyphicon-trash' href='https://www.w3schools.com/html/'></a>";
+
+      // var line = document.createElement("a");
+      // line.innerHTML = "class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'" ;
       
-      var line = document.createElement("a");
-      line.innerHTML = "class='glyphicon glyphicon-pencil' href='https://www.w3schools.com/html/'" ;
+
+      var line = document.createElement("p");
+      line.innerHTML = "<strong>" + 'TEST' + ": </strong>";
+      // document.getElementById("messages").appendChild(line);
+
 
       ref.on("value", function(snapshot) { // อ่านค่าจากจาก filebase
         data = snapshot.val();
@@ -135,7 +142,7 @@
           c_key.appendChild(document.createTextNode(key));
           c_date.appendChild(document.createTextNode(date));
           c_value.appendChild(document.createTextNode(value));
-          c_operations.appendChild(document.createTextNode(line));
+          document.getElementById('o-id').appendChild(line);
 
 
           // var data_g = {};
