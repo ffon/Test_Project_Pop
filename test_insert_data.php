@@ -145,7 +145,7 @@
           c_key.appendChild(document.createTextNode(key));
           c_date.appendChild(document.createTextNode(date));
           c_value.appendChild(document.createTextNode(value));
-          c_operations.append(line.innerHTML);
+          c_operations.append(line);
 
 
           // var data_g = {};
