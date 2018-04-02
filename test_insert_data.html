@@ -35,19 +35,24 @@
 
     <div class="form-item form-type-textfield form-group">  
 
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <label class="control-label" for="edit-key">Key</label> 
         <input class="form-control form-text" type="text" id="insert-key" name="key" value="" size="60" maxlength="255">
       </div>
 
-      <div class="col-sm-4">
-        <label class="control-label" for="edit-key">Value</label> 
+      <div class="col-sm-3">
+        <label class="control-label" for="edit-key">Link</label> 
         <input class="form-control form-text" type="text" id="insert-value" name="value" value="" size="60" maxlength="255">
       </div>
 
-      <div class="col-sm-4" style="padding-top: 25px">
-        <div class="col-sm-2"><button type="submit" class="btn btn-success">Submit</button></div>
-        <div class="col-sm-2"><button type="submit" class="btn btn-warning">Reset</button></div>
+      <div class="col-sm-3">
+        <label class="control-label" for="edit-key">Comment</label> 
+        <input class="form-control form-text" type="text" id="insert-comment" name="comment" value="" size="60" maxlength="255">
+      </div>
+
+      <div class="col-sm-3" style="padding-top: 25px">
+        <div class="col-sm-1"><button id="btn-insert" type="submit" class="btn btn-success">Submit</button></div>
+        <div class="col-sm-1"><button type="submit" class="btn btn-warning">Reset</button></div>
       </div>
 
     </div>
@@ -97,8 +102,27 @@
       firebase.initializeApp(config);
       display_data();
 
+      document.getElementById('btn-insert').onclick = function() {
+        var ref     = firebase.database().ref();
+        var key     = document.getElementById('insert-key');
+        var link    = document.getElementById('insert-value');
+        var comment = document.getElementById('insert-comment');
+        
+        ref.on("value", function(snapshot) { 
+          var data = snapshot.val();
+          var id = data.length;
+        });
 
-      
+        console.log('in on click btn insert');
+        console.log(id);
+        console.log(key);
+        console.log(link);
+        console.log(comment);
+        console.log('-------------------');
+        insert_data(id,key,link,comment);
+
+      }
+
 
       function display_data()
       {
@@ -146,11 +170,15 @@
         });
       }
 
-      function insert_data()
+      function insert_data(id,key,link,comment)
       {
 
-        // ดึงข้อมูลจาก textfield ที่เพิ่มเข้ามา insert เข้าปกติ
-        // var push_Ref = ref("key").set("value"); // เพิ่มข้อมูลลงใน file base
+        console.log('in on ft insert');
+        console.log(id);
+        console.log(key);
+        console.log(link);
+        console.log(comment);
+        // var push_Ref = firebase.database().ref(id).set({key:key,link:link,comment:comment}); // เพิ่มข้อมูลลงใน file base
       }
 
       function edit_data()
