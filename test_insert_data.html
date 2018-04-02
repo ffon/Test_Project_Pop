@@ -35,7 +35,7 @@
 
     <div class="form-item form-type-textfield form-group">  
 
-      <div class="col-sm-3">
+      <div class="col-sm-2">
         <label class="control-label" for="edit-key">Key</label> 
         <input class="form-control form-text" type="text" id="insert-key" name="key" value="" size="60" maxlength="255">
       </div>
@@ -50,9 +50,9 @@
         <input class="form-control form-text" type="text" id="insert-comment" name="comment" value="" size="60" maxlength="255">
       </div>
 
-      <div class="col-sm-3" style="padding-top: 25px">
-        <div><button id="btn-insert" type="submit" class="btn btn-success">Submit</button></div>
-        <div><button type="submit" class="btn btn-warning">Reset</button></div>
+      <div class="col-sm-4" style="padding-top: 25px">
+        <div class="col-sm-2"><button id="btn-insert" type="submit" class="btn btn-success">Submit</button></div>
+        <div class="col-sm-2"><button type="submit" class="btn btn-warning">Reset</button></div>
       </div>
 
     </div>
@@ -111,15 +111,16 @@
         ref.on("value", function(snapshot) { 
           var data = snapshot.val();
           var id = data.length;
+          console.log('in on click btn insert');
+          console.log(id);
+          console.log(key);
+          console.log(link);
+          console.log(comment);
+          console.log('-------------------');
+          insert_data(id,key,link,comment);
         });
 
-        console.log('in on click btn insert');
-        console.log(id);
-        console.log(key);
-        console.log(link);
-        console.log(comment);
-        console.log('-------------------');
-        insert_data(id,key,link,comment);
+
 
       }
 
