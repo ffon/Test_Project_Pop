@@ -111,13 +111,21 @@
         ref.on("value", function(snapshot) { 
           var data = snapshot.val();
           var id = data.length;
-          console.log('in on click btn insert');
-          console.log(id);
-          console.log(key.value);
-          console.log(link.value);
-          console.log(comment.value);
-          console.log('-------------------');
-          insert_data(id,key,link,comment);
+          for(var i =0; i<data.length ;i++){
+            if(key.value != "" && key.value != data[i].key){
+              console.log('in on click btn insert');
+              console.log(id);
+              console.log(key.value);
+              console.log(link.value);
+              console.log(comment.value);
+              console.log('-------------------');
+              insert_data(id,key.value,link.value,comment.value);
+            }else{
+              alert("Key error");
+            }
+          }
+
+          
         });
 
 
