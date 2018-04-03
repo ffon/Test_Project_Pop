@@ -1,6 +1,6 @@
 <html> 
 <head> 
-<title>1Data management</title>  
+<title>Data management</title>  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -111,6 +111,7 @@
         var comment = document.getElementById('insert-comment');
         var data;
         var id;
+        var num =0;
         ref.on("value", function(snapshot) { 
           data = snapshot.val();
           id = data.length;
@@ -120,10 +121,23 @@
 		for(var i =0; i<data.length ;i++){
 
 		  if(key.value == data[i].key){
-			  
-		    alert("Key error !");
-			  
+			num = 1;
 		  }else{
+		    	num = 0;
+		  }
+		}
+		
+	   }else{
+		   
+		   alert("Key is not have value !");
+	   }
+	      
+	   if(num == 1){
+		   
+		    alert("Key is have in db !");
+		   
+	   }else{
+		   
 		    console.log('in on click btn insert');
 		    console.log(key.value+"="+data[i].key);
 		    console.log(id);
@@ -132,12 +146,6 @@
 		    console.log(comment.value);
 		    console.log('-------------------');
 		    insert_data(id,key.value,link.value,comment.value);
-		    
-		  }
-			
-		}	
-	   }else{
-		   alert("Key is not have value !");
 	   }
 
 	      
