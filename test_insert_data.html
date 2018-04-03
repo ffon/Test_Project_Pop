@@ -1,6 +1,6 @@
 <html> 
 <head> 
-<title>2Data management</title>  
+<title>1Data management</title>  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -126,7 +126,7 @@
           id = data.length;
           
         });
-	if(key.value != ""){
+	if(key.value != "" && link.value != "" && comment.value != ""){
 		for(var i =0; i<data.length ;i++){
 
 		  if(key.value == data[i].key){
@@ -137,10 +137,10 @@
 		console.log(num);
 		if(num == 1){
 
-			alert("Key is have in db !");
+			alert("This key already exists.");
 
 		}else{
-
+			
 			console.log('in on click btn insert');
 			//   console.log(key.value+"="+data[i].key);
 			console.log(id);
@@ -149,12 +149,13 @@
 			console.log(comment.value);
 			console.log('-------------------');
 			insert_data(id,key.value,link.value,comment.value);
+			alert("Save completed.");
 		}
 
 		
 	   }else{
 		   
-		   alert("Key is not have value !");
+		   alert("Please enter a message.");
 	   }
       }
 
@@ -193,7 +194,7 @@
             var c_operations = row.insertCell(4);  
 
             var line = document.createElement("p"); // สร้าง icon แก้ไข กับ ลบ
-            line.innerHTML = "&nbsp &nbsp <a class='glyphicon glyphicon-pencil''"+" id="+id+" name='edit'></a>";
+            line.innerHTML = "&nbsp &nbsp<button type='button' class='glyphicon glyphicon-pencil''"+" id="+id+" name='edit'>Edit</button>"; // <a class='glyphicon glyphicon-pencil''"+" id="+id+" name='edit'></a>
 
             c_id.appendChild(document.createTextNode(id)); // เพิ่มข้อมูลลงในตารางแต่ละคอลัม
             c_key.appendChild(document.createTextNode(key));
