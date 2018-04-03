@@ -1,6 +1,6 @@
 <html> 
 <head> 
-<title>Data management</title>  
+<title>1Data management</title>  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -119,8 +119,11 @@
 	if(key.value != ""){
 		for(var i =0; i<data.length ;i++){
 
-		  if(key.value != data[i].key){
+		  if(key.value == data[i].key){
 			  
+		    alert("Key error !");
+			  
+		  }else{
 		    console.log('in on click btn insert');
 		    console.log(key.value+"="+data[i].key);
 		    console.log(id);
@@ -129,12 +132,12 @@
 		    console.log(comment.value);
 		    console.log('-------------------');
 		    insert_data(id,key.value,link.value,comment.value);
-			  
-		  }else{
-		    alert("Key error");
+		    
 		  }
 			
 		}	
+	   }else{
+		   alert("Key is not have value !");
 	   }
 
 	      
