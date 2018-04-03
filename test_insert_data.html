@@ -1,6 +1,6 @@
 <html> 
 <head> 
-<title>1Data management</title>  
+<title>2Data management</title>  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -103,7 +103,16 @@
 	firebase.initializeApp(config);
 
       display_data();
-
+	    
+      document.getElementsByName('edit').onclick = function() {
+	      
+	      var edit_data = document.getElementsByName('edit');
+	      edit_data.id;
+	      console.log("edit_data");
+	      console.log(edit_data.id);
+	      
+      }
+      
       document.getElementById('btn-insert').onclick = function() {
         var ref     = firebase.database().ref();
         var key     = document.getElementById('insert-key');
@@ -111,7 +120,7 @@
         var comment = document.getElementById('insert-comment');
         var data;
         var id;
-        var num;
+        var num = 0 ;
         ref.on("value", function(snapshot) { 
           data = snapshot.val();
           id = data.length;
@@ -123,11 +132,9 @@
 		  if(key.value == data[i].key){
 			console.log(key.value+"="+data[i].key);
 			num = 1;
-		  }else{
-		    	num = 0;
 		  }
 		}
-
+		console.log(num);
 		if(num == 1){
 
 			alert("Key is have in db !");
@@ -213,8 +220,9 @@
         // var push_Ref = firebase.database().ref(id).set({key:key,link:link,comment:comment}); // เพิ่มข้อมูลลงใน file base
       }
 
-      function edit_data()
+      function edit_data(id)
       {
+
         // ดึง id ที่เลือกมาจาก tabel และค่าที่ต้องการ อัพเดต ทำการอัพเดตข้อมูล
         // var write_Ref = ref(id); // แก้ไข้ข้อมูลใน a ที่ index 0 เป็น 1
         // write_Ref.update ({
