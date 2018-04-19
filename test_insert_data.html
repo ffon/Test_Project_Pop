@@ -180,25 +180,25 @@
     </div>
 
 
-    <h2>Modal Login Form</h2>
+    <!-- <h2>Modal Login Form</h2>
 
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
     
     <div id="id01" class="modal">
       
       <form class="modal-content animate">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
         <div class="container">
-          <label for="uname"><b>Key</b></label>
+          <label for="keys"><b>Key</b></label>
           <input type="text" placeholder="Enter key" id="keys" name="keys" required>
     
-          <label for="psw"><b>Link</b></label>
+          <label for="link"><b>Link</b></label>
           <input type="text" placeholder="Enter link" id="link" name="link" required>
             
-          <label for="psw"><b>Comment</b></label>
+          <label for="comment"><b>Comment</b></label>
           <input type="text" placeholder="Enter comment" id="comment" name="comment" required>
 
-          <button onclick="edit_data()">Save</button>
+          <button id="save">Save</button>
          
         </div>
     
@@ -238,9 +238,35 @@
  
     <script> 
 
-    function getModal(){
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+    function getModal(btn_this){
       // Get the modal
       document.getElementById('id01').style.display='block';
+
+      
+     
+
+      var key = document.getElementById('keys');
+      var link = document.getElementById('link');
+      var comment = document.getElementById('commemt');
+
+      console.log(btn_this.value);
+      console.log(document.getElementById('save').onclick);
+      
+      console.log(key);
+      console.log(link);
+      console.log(comment);
+
     }
 
 
@@ -399,10 +425,6 @@
         
       }
       
-     
-     
-      
-
 
 	    
     </script>
